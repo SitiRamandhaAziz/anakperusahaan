@@ -37,18 +37,21 @@ class FormNeraca extends CI_Controller {
 
 	public function simpan ()
 	{
-	
+
+		
 		$data = array(
-			'kassetarakas' => $this->input->post("kas-setara-kas"),
-			'piutangusaha' =>$this->input->post("piutang-usaha"),
-			'piutangpihakberelasi' => $this->input->post("piutang-pihak-berelasi")
+			'kas_dan_setara_kas' => $this->input->post("kas-setara-kas"),
+			'piutang_usaha' =>$this->input->post("piutang-usaha"),
+			'piutang_pihak_berelasi' => $this->input->post("piutang-pihak-berelasi")
 			);
 		$this->Neraca_model->simpan($data);
 		$this->session->set_flashdata('notif', '<div class = "alert alert-success alert-dismissible"> 	Success! Data Saved </div>');
 
-		redirect ('FormNeraca/');
-		
+		redirect ('FormNeraca');
+	
+			
 	}
 
 	
 }
+
