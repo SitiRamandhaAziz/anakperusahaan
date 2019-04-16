@@ -38,7 +38,7 @@ class FormNeraca extends CI_Controller {
 	public function simpan ()
 	{
 
-		if($this->input->post('simpan')){
+		
 		$data = array(
 			'kassetarakas' => $this->input->post("kas-setara-kas"),
 			'piutangusaha' =>$this->input->post("piutang-usaha"),
@@ -48,7 +48,7 @@ class FormNeraca extends CI_Controller {
 		$this->session->set_flashdata('notif', '<div class = "alert alert-success alert-dismissible"> 	Success! Data Saved </div>');
 
 		redirect ('FormNeraca/');
-	}
+
 			
 	}
 
